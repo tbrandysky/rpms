@@ -20,7 +20,7 @@
 OPTIONS="-pidfile /var/run/lsyncd.pid /etc/lsyncd.conf"
 
 if [ -e /etc/sysconfig/lsyncd ]; then
-	/etc/sysconfig/lsyncd
+    . /etc/sysconfig/lsyncd
 fi
 
 RETVAL=0
