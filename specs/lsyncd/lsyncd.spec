@@ -1,11 +1,7 @@
-# $Id$
-# Authority: yury
-# Upstream: Axel Kittenberger <axkibe$gmail,com>
-
 Summary:        Live syncing (mirroring) daemon
 Name:           lsyncd
-Version:        2.1.4
-Release:        1%{?dist}
+Version:        2.1.5
+Release:        1%{?dist}.rf
 License:        GPL
 Group:          Applications/File
 URL:            http://code.google.com/p/lsyncd/
@@ -17,6 +13,8 @@ Source3:        %{name}.sysconfig
 Source4:        %{name}.logrotate
 
 BuildRoot:      %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
+
+Provides: lsyncd = %{version}-%{release}
 
 # Use systemd unit files on Fedora 15 and above.
 %if 0%{?fedora} >= 15 || 0%{?rhel} >= 7
@@ -125,6 +123,9 @@ fi
 %exclude %{_docdir}/lsyncd
 
 %changelog
+* Tue May 13 2014 Tomas Brandysky <tomas.brandysky@gmail.com> - 2.1.5-1
+- upgraded to release 2.1.5
+
 * Wed Dec 13 2012 Troy C <troxor0@yahoo.com> - 2.1.4-1
 - Updated to release 2.1.4
 - Added a systemd service file
