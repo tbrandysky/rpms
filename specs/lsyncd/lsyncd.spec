@@ -1,7 +1,7 @@
 Summary:        Live syncing (mirroring) daemon
 Name:           lsyncd
 Version:        2.1.5
-Release:        1%{?dist}.rf
+Release:        1.%{?dist}.rf
 License:        GPL
 Group:          Applications/File
 URL:            http://code.google.com/p/lsyncd/
